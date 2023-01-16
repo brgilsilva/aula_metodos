@@ -2,10 +2,10 @@ package atividadePoo1;
 
 public class Cliente {
 
-    private int codCli;
+    private int codCli=0;
     private float cpfCli;
     private String nomeCli;
-    private int telCli;
+    private int telCli=0;
     private String sexoCli;
 
 
@@ -58,8 +58,13 @@ public class Cliente {
         this.telCli = telCli;
         this.sexoCli = sexoCli;
     }
-}
 
+    public void visualizar(){
+        System.out.println("Nome do cliente: " +nomeCli);
+        System.out.println("Tel do cliente: "+telCli);
+    }
+
+}
 package atividadePoo1;
 
 public class TestaCliente {
@@ -67,12 +72,10 @@ public class TestaCliente {
 
 
         Cliente cliente1 = new Cliente(01,123456789, "João da Silva", 99999444, "Masculino");
-        System.out.println("Nome do cliente: " +cliente1.getNomeCli());
-        System.out.println(("Tel do cliente: "+cliente1.getTelCli()));
+        cliente1.visualizar();
 
     }
 }
-
 package atividadePoo2;
 
 public class Funcionario {
@@ -130,6 +133,11 @@ public class Funcionario {
     public void setSalarioFunc(float salarioFunc) {
         this.salarioFunc = salarioFunc;
     }
+
+    public void visualizar (){
+        System.out.println("Melhor funcionário da empresa é: "+nomeFunc);
+        System.out.println("O salário dele é: " + salarioFunc);
+    }
 }
 package atividadePoo2;
 
@@ -138,12 +146,11 @@ public class TestaFuncionario {
 
         atividadePoo2.Funcionario func1 = new atividadePoo2.Funcionario(01,"Bruno Gilberto",999554455,"Desenvolvedor Senior", 25000);
 
-        System.out.println("Melhor funcionário da empresa é: "+func1.getNomeFunc());
-        System.out.println("O salário dele é: " + func1.getSalarioFunc());
+        func1.visualizar();
+
 
     }
 }
-
 package atividadePoo3;
 
 public class Produto {
@@ -200,6 +207,12 @@ public class Produto {
     public void setPreco(float preco) {
         this.preco = preco;
     }
+
+    public void visualizar(){
+        System.out.println("O produto escolhido foi: "+vedeoGame);
+        System.out.println("O preço final é de: "+preco);
+
+    }
 }
 package atividadePoo3;
 
@@ -207,9 +220,7 @@ public class TestaGames {
     public static void main(String[] args) {
 
         atividadePoo3.Produto venda1 = new atividadePoo3.Produto(03,"Playstation4","2 Controles","Sem jogos",4500);
-
-        System.out.println("O produto escolhido foi: "+venda1.getVedeoGame());
-        System.out.println("O preço final é de: "+venda1.getPreco());
+        venda1.visualizar();
 
     }
 }
@@ -270,6 +281,10 @@ public class Ingresso {
     public void setSala(int sala) {
         this.sala = sala;
     }
+
+    public void visualizar(){
+        System.out.println("O filme "+filme+" começará as "+horario+" na sala "+sala);
+    }
 }
 
 package atividadePoo4;
@@ -279,7 +294,7 @@ public class TesteIngresso {
 
         atividadePoo4.Ingresso ingresso = new atividadePoo4.Ingresso("Senhor dos Anéis","4h20","14h",15,2);
 
-        System.out.println("O filme "+ingresso.getFilme()+" começará as "+ingresso.getHorario()+" na sala "+ingresso.getSala());
+        ingresso.visualizar();
 
 
     }
@@ -340,6 +355,11 @@ public class Farmacia {
     public void setReceita(String receita) {
         this.receita = receita;
     }
+    public void visualizar(){
+        System.out.println("O medicamento escolhido foi o "+remedio+" no valor de R$"+valor+ " cada.");
+        System.out.println("É necessario receita para este medicamento? "+receita);
+
+    }
 }
 package atividadePoo5;
 
@@ -347,13 +367,10 @@ public class TestaFarmacia {
     public static void main(String[] args) {
         atividadePoo5.Farmacia remedio = new atividadePoo5.Farmacia(23,"Antibiótico",14,32,"Sim");
 
-        System.out.println("O medicamento escolhido foi o "+remedio.getRemedio()+" no valor de R$"+remedio.getValor()+ " cada.");
-        System.out.println("É necessario receita para este medicamento? "+remedio.getReceita());
-
+        remedio.visualizar();
 
     }
 }
-
 package atividadePoo6;
 
 public class Curso {
@@ -410,6 +427,9 @@ public class Curso {
     public void setModalidade(String modalidade) {
         this.modalidade = modalidade;
     }
+    public void visualizar(){
+        System.out.println("O curso de "+nome+ " possui duração de "+duracao+" meses, no valor mensal de R$"+valor+ " e na modalidade "+modalidade);
+    }
 }
 
 
@@ -418,6 +438,6 @@ package atividadePoo6;
 public class TestaCurso {
     public static void main(String[] args) {
         atividadePoo6.Curso curso = new atividadePoo6.Curso(44,"Redes de computadores",24,99.9f,"EAD");
-        System.out.println("O curso de "+curso.getNome()+ " possui duração de "+curso.getDuracao()+" meses, no valor mensal de R$"+curso.getValor()+ " e na modalidade "+curso.getModalidade());
+        curso.visualizar();
     }
 }

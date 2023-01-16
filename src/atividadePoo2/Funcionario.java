@@ -55,4 +55,9 @@ public class Funcionario {
     public void setSalarioFunc(float salarioFunc) {
         this.salarioFunc = salarioFunc;
     }
+
+    public void visualizar (){
+        System.out.println("Melhor funcionário da empresa é: "+nomeFunc);
+        System.out.println("O salário dele é: " + salarioFunc);
+    }
 }

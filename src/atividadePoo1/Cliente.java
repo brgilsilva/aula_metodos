@@ -2,10 +2,10 @@ package atividadePoo1;
 
 public class Cliente {
 
-    private int codCli;
+    private int codCli=0;
     private float cpfCli;
     private String nomeCli;
-    private int telCli;
+    private int telCli=0;
     private String sexoCli;
 
 
@@ -58,4 +58,10 @@ public class Cliente {
         this.telCli = telCli;
         this.sexoCli = sexoCli;
     }
+
+    public void visualizar(){
+        System.out.println("Nome do cliente: " +nomeCli);
+        System.out.println("Tel do cliente: "+telCli);
+    }
+
 }

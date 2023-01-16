@@ -54,6 +54,9 @@ public class Curso {
     public void setModalidade(String modalidade) {
         this.modalidade = modalidade;
     }
+    public void visualizar(){
+        System.out.println("O curso de "+nome+ " possui duração de "+duracao+" meses, no valor mensal de R$"+valor+ " e na modalidade "+modalidade);
+    }
 }
 
 

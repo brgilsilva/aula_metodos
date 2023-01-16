@@ -5,7 +5,7 @@ public class TesteIngresso {
 
         Ingresso ingresso = new Ingresso("Senhor dos Anéis","4h20","14h",15,2);
 
-        System.out.println("O filme "+ingresso.getFilme()+" começará as "+ingresso.getHorario()+" na sala "+ingresso.getSala());
+        ingresso.visualizar();
 
 
     }

@@ -54,4 +54,10 @@ public class Produto {
     public void setPreco(float preco) {
         this.preco = preco;
     }
+
+    public void visualizar(){
+        System.out.println("O produto escolhido foi: "+vedeoGame);
+        System.out.println("O preço final é de: "+preco);
+
+    }
 }

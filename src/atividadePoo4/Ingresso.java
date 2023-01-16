@@ -55,5 +55,9 @@ public class Ingresso {
     public void setSala(int sala) {
         this.sala = sala;
     }
+
+    public void visualizar(){
+        System.out.println("O filme "+filme+" começará as "+horario+" na sala "+sala);
+    }
 }
 

@@ -54,4 +54,9 @@ public class Farmacia {
     public void setReceita(String receita) {
         this.receita = receita;
     }
+    public void visualizar(){
+        System.out.println("O medicamento escolhido foi o "+remedio+" no valor de R$"+valor+ " cada.");
+        System.out.println("É necessario receita para este medicamento? "+receita);
+
+    }
 }
